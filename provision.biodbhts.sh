@@ -32,8 +32,10 @@ rename 'Makefile.new','Makefile' ; "
 make
 make install
 export HTSLIB_DIR=$(pwd)
+cat >>/home/vagrant/.bashrc <<EOF
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)
+EOF
 export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
-#TODO set LD_LIBRARY_PATH in .bashrc
 cd ..
 
 
