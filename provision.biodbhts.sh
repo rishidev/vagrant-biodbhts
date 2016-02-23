@@ -7,8 +7,8 @@ apt-get install -y bioperl
 apt-get install -y git
 apt-get install -y build-essential
 apt-get install -y emacs23
-apt-get install -y cpanminus
-cpanm -f Module::Build
+#apt-get install -y cpanminus
+#cpanm -f Module::Build
 
 #get Bio::DB::HTS installed
 git clone https://github.com/samtools/htslib.git
@@ -42,6 +42,7 @@ cd ..
 #get Bio::DB::HTS installed
 git clone https://github.com/Ensembl/Bio-HTS.git
 cd Bio-HTS
+git checkout feature/congenica_perl_hts
 perl Build.PL
 ./Build
 ./Build test
