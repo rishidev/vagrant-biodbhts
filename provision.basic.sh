@@ -7,8 +7,8 @@ apt-get install -y bioperl
 apt-get install -y git
 apt-get install -y build-essential
 apt-get install -y emacs23
-#apt-get install -y cpanminus
-#cpanm -f Module::Build
+apt-get install -y cpanminus
+cpanm -f Module::Build
 
 
 

@@ -7,8 +7,8 @@ apt-get install -y bioperl
 apt-get install -y git
 apt-get install -y build-essential
 apt-get install -y emacs23
-#apt-get install -y cpanminus
-#cpanm -f Module::Build
+apt-get install -y cpanminus
+cpanm -f Module::Build
 
 #get Bio::DB::HTS installed
 git clone https://github.com/samtools/htslib.git
@@ -31,21 +31,19 @@ close $out;
 rename 'Makefile.new','Makefile' ; "
 make
 make install
-export HTSLIB_DIR=$(pwd)
-cat >>/home/vagrant/.bashrc <<EOF
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)
-EOF
-export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
 cd ..
 
 
-#get Bio::DB::HTS installed
+#get Bio::DB::HTS installed - from GitHub 
 git clone https://github.com/Ensembl/Bio-HTS.git
 cd Bio-HTS
-git checkout feature/congenica_perl_hts
+#git checkout release/cpan107
 perl Build.PL
 ./Build
 ./Build test
 ./Build install
+
+#From CPAN
+#cpanm Bio::DB::HTS
 
 
