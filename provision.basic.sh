@@ -16,7 +16,3 @@ cpanm -f Module::Build
 cpanm -f File::Copy::Recursive
 cpanm -f Archive::Zip
 
-git config --global user.name "Rishi Nag"
-git config --global user.email "rishidev@users.noreply.github.com"
-
-
