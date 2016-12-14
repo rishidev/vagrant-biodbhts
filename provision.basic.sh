@@ -8,6 +8,7 @@ apt-get install -y git
 apt-get install -y build-essential
 apt-get install -y emacs23
 apt-get install -y cpanminus
+apt-get install -y unzip
 
 #This is for Bio::DB::HTS
 cpanm -f Module::Build
